@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0b0f19] text-slate-100 antialiased overflow-x-hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(19, 27, 46, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(26, 36, 59, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-input {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+}
+
+.glass-input:focus {
+  border-color: #f59e0b;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
+/* Leaflet dark theme map overrides */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #0f172a !important;
+  border-radius: 0.75rem;
+  z-index: 1;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #131b2e !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0.75rem !important;
+  padding: 4px !important;
+}
+
+.leaflet-popup-tip {
+  background: #131b2e !important;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* AI Assistant Panel slide-in */
+@keyframes slideInFromRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+.ai-panel-enter {
+  animation: slideInFromRight 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Floating button pulse glow */
+@keyframes floatPulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(245,158,11,0.35), 0 0 28px rgba(16,185,129,0.2); }
+  50%       { box-shadow: 0 0 22px rgba(245,158,11,0.55), 0 0 48px rgba(16,185,129,0.35); }
+}
+.ai-fab-glow {
+  animation: floatPulse 3s ease-in-out infinite;
+}
