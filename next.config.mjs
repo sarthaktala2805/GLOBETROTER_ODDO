@@ -10,8 +10,7 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // Dynamic routes ko export time par crash hone se bachane ke liye
-  distDir: 'out',
+  trailingSlash: true,
 };
 
 export default nextConfig;
