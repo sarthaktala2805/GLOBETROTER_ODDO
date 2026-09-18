@@ -1,0 +1,17 @@
+{
+  "name": "BharatYatra | India Travel Planner",
+  "short_name": "BharatYatra",
+  "description": "Plan multi-city journeys across 26+ Indian destinations with smart itineraries, fuel calculations, packing checklists, and budgets.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090e17",
+  "theme_color": "#ff6b35",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
