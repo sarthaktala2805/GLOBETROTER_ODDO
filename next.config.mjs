@@ -5,13 +5,13 @@ const nextConfig = {
     unoptimized: true,
   },
   typescript: {
-    // Build ke waqt type check errors ignore karega
     ignoreBuildErrors: true,
   },
   eslint: {
-    // Build ke waqt linting errors ignore karega
     ignoreDuringBuilds: true,
   },
+  // Dynamic routes ko export time par crash hone se bachane ke liye
+  distDir: 'out',
 };
 
 export default nextConfig;
